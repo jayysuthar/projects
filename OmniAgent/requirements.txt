@@ -1,0 +1,27 @@
+# Core dependencies
+torch>=2.0.0
+transformers>=4.30.0
+langchain>=0.0.267
+langchain-community>=0.0.1
+faiss-cpu>=1.7.4
+sentence-transformers>=2.2.2
+instructor-embedding>=1.0.0
+
+# Web scraping
+beautifulsoup4>=4.11.1
+requests>=2.28.1
+urllib3>=1.26.12
+
+# Data processing
+numpy>=1.24.1
+pandas>=1.5.3
+tqdm>=4.64.1
+
+# UI and visualization
+gradio>=3.35.0
+matplotlib>=3.7.1
+
+# Utilities
+pyyaml>=6.0
+python-dotenv>=1.0.0
+pytest>=7.3.1

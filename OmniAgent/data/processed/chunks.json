@@ -1,0 +1,20 @@
+[
+  {
+    "id": "chunk_001",
+    "text": "The University of Texas at Dallas is a top-ranked public research university located in Richardson, Texas. Founded in 1969, UT Dallas has evolved into a leading STEM-focused institution with more than 29,000 students and 500+ degree programs.",
+    "metadata": {
+      "source_url": "https://www.utdallas.edu/about/",
+      "source_title": "About UT Dallas | The University of Texas at Dallas",
+      "chunk_index": 0
+    }
+  },
+  {
+    "id": "chunk_002",
+    "text": "UT Dallas offers a wide range of undergraduate, graduate, and doctoral programs across eight schools: Arts, Technology, and Emerging Communication; Arts and Humanities; Behavioral and Brain Sciences; Engineering and Computer Science; Interdisciplinary Studies; Management; Natural Sciences and Mathematics; and Economic, Political and Policy Sciences.",
+    "metadata": {
+      "source_url": "https://www.utdallas.edu/academics/",
+      "source_title": "Academics | The University of Texas at Dallas",
+      "chunk_index": 0
+    }
+  }
+]

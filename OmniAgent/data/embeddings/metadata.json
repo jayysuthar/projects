@@ -1,0 +1,8 @@
+{
+  "embedding_model": "hkunlp/instructor-large",
+  "instruction": "Represent the University of Texas at Dallas content for retrieval:",
+  "dimensions": 768,
+  "num_chunks": 2,
+  "created_at": "2025-04-15T14:30:00Z",
+  "index_type": "IndexFlatL2"
+}

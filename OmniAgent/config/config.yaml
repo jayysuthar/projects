@@ -1,0 +1,109 @@
+# OmniAgent Configuration File
+
+# Application settings
+application:
+  name: "OmniAgent"
+  version: "0.1.0"
+  log_level: "INFO"
+  debug_mode: false
+  temp_directory: "./temp"
+  data_directory: "./data"
+
+# Web scraping configuration
+scraping:
+  base_url: "https://www.utdallas.edu"
+  max_pages: 100
+  timeout: 30
+  user_agent: "OmniAgent Scraper/0.1.0"
+  respect_robots_txt: true
+  delay_between_requests: 1.0 # seconds
+  allowed_domains:
+    - "utdallas.edu"
+  excluded_patterns:
+    - "/calendar/"
+    - "/login"
+    - "/search"
+  include_patterns:
+    - "/admissions"
+    - "/academics"
+    - "/research"
+    - "/student-life"
+    - "/about"
+
+# Text processing settings
+text_processing:
+  chunk_size: 500
+  chunk_overlap: 50
+  min_chunk_length: 100
+  remove_html_tags: true
+  remove_urls: true
+  remove_emails: true
+  language: "en"
+
+# Embedding settings
+embeddings:
+  model_name: "hkunlp/instructor-large"
+  instruction: "Represent the University of Texas at Dallas content for retrieval:"
+  batch_size: 32
+  max_length: 512
+  device: "cuda" # "cpu" or "cuda"
+  cache_dir: "./models"
+
+# FAISS settings
+faiss:
+  index_type: "IndexFlatL2"
+  nlist: 100 # For IVF indices
+  nprobe: 20 # For search
+  storage_path: "./data/embeddings/faiss_index.bin"
+  metric_type: "l2" # l2, inner_product, etc.
+
+# Language model settings
+language_model:
+  model_name: "google/flan-t5-xxl"
+  cache_dir: "./models"
+  max_new_tokens: 256
+  temperature: 0.7
+  top_p: 0.9
+  top_k: 50
+  device: "cuda" # "cpu" or "cuda"
+  precision: "float16" # float32, float16, int8
+  prompt_template: |
+    Answer the question based on the following context:
+
+    Context: {context}
+
+    Chat History: {chat_history}
+
+    Question: {question}
+
+    Answer:
+
+# Retrieval settings
+retrieval:
+  top_k: 5
+  similarity_threshold: 0.7
+  rerank_results: true
+  include_metadata: true
+
+# UI settings
+ui:
+  title: "OmniAgent - UT Dallas Assistant"
+  description: "Ask me anything about the University of Texas at Dallas!"
+  theme: "default"
+  max_history: 10
+  port: 7860
+  share: false
+  allowed_paths:
+    - "/"
+  css: ""
+  welcome_message: "Hello! I'm OmniAgent, your UT Dallas assistant. How can I help you today?"
+  avatar: "./assets/avatar.png"
+
+# Performance evaluation
+evaluation:
+  test_questions_path: "./data/test_questions.json"
+  metrics:
+    - "accuracy"
+    - "relevance"
+    - "response_time"
+    - "context_retention"

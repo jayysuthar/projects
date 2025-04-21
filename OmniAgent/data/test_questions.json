@@ -1,0 +1,37 @@
+[
+  {
+    "question": "What is UT Dallas?",
+    "expected_answer_contains": [
+      "research university",
+      "Richardson",
+      "Texas",
+      "founded",
+      "1969"
+    ],
+    "difficulty": "easy"
+  },
+  {
+    "question": "How many schools are there at UT Dallas?",
+    "expected_answer_contains": ["eight", "schools"],
+    "difficulty": "medium"
+  },
+  {
+    "question": "What programs are offered in the School of Engineering and Computer Science?",
+    "expected_answer_contains": [
+      "computer science",
+      "electrical engineering",
+      "software engineering"
+    ],
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the student population of UT Dallas?",
+    "expected_answer_contains": ["29,000"],
+    "difficulty": "easy"
+  },
+  {
+    "question": "When was UT Dallas founded?",
+    "expected_answer_contains": ["1969"],
+    "difficulty": "easy"
+  }
+]
