@@ -1,4 +1,4 @@
-# OmniAgent: Automating Customer Service using LangChain
+# OmniAgent: Context-Aware Customer Service
 
 ## Project Overview
 
